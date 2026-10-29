@@ -504,6 +504,14 @@ $deleteAchievementButton.FlatStyle = "Flat"
 $deleteAchievementButton.BackColor = $script:RedColor
 $deleteAchievementButton.ForeColor = $script:TextColor
 $deleteAchievementButton.Anchor = "Bottom,Left"
+$editAchievementButton = New-Object System.Windows.Forms.Button
+$editAchievementButton.Text = "Edit"
+$editAchievementButton.Location = New-Object System.Drawing.Point(705, 400)
+$editAchievementButton.Size = New-Object System.Drawing.Size(90, 32)
+$editAchievementButton.FlatStyle = "Flat"
+$editAchievementButton.BackColor = $script:GoldColor
+$editAchievementButton.ForeColor = [System.Drawing.Color]::Black
+$editAchievementButton.Anchor = "Bottom,Left"
 
 $statusLabel = New-Object System.Windows.Forms.Label
 $statusLabel.Text = "Ready"
