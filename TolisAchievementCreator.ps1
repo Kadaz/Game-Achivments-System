@@ -665,16 +665,64 @@ $toggleAchievementButton.Add_Click({
     $achievement.Unlocked = -not $achievement.Unlocked
 
 if ($achievement.Unlocked) {
-    $notifyIcon.BalloonTipTitle = "Achievement Unlocked!"
+
+    $trophy = [string]$achievement.Trophy
+
+    switch ($trophy) {
+        "Bronze"   { $trophySymbol = "🥉" }
+        "Silver"   { $trophySymbol = "🥈" }
+        "Gold"     { $trophySymbol = "🥇" }
+        "Platinum" { $trophySymbol = "🏆" }
+        default    {
+            $trophy = "Bronze"
+            $trophySymbol = "🥉"
+        }
+    }
+
+    # Show a Windows notification without emoji, because its font is controlled by Windows
+    $notifyIcon.BalloonTipTitle = "$trophy Trophy Unlocked!"
     $notifyIcon.BalloonTipText = "$($game.Name): $($achievement.Title)"
     $notifyIcon.ShowBalloonTip(5000)
-	[System.Media.SystemSounds]::Asterisk.Play()
-	[System.Windows.Forms.MessageBox]::Show(
-    "Achievement Unlocked!`r`n`r`n$($achievement.Title)",
-    "Tolis Achievement System",
-    [System.Windows.Forms.MessageBoxButtons]::OK,
-    [System.Windows.Forms.MessageBoxIcon]::Information
-)
+
+    [System.Media.SystemSounds]::Asterisk.Play()
+
+    # Custom trophy popup using Segoe UI Emoji
+    $popup = New-Object System.Windows.Forms.Form
+    $popup.Text = "Tolis Achievement System"
+    $popup.Size = New-Object System.Drawing.Size(440, 220)
+    $popup.StartPosition = "CenterScreen"
+    $popup.FormBorderStyle = "FixedDialog"
+    $popup.MaximizeBox = $false
+    $popup.MinimizeBox = $false
+    $popup.ShowInTaskbar = $false
+
+    $trophyLabel = New-Object System.Windows.Forms.Label
+    $trophyLabel.Text = "$trophySymbol $trophy Trophy Unlocked!"
+    $trophyLabel.Font = New-Object System.Drawing.Font(
+        "Segoe UI Emoji", 18, [System.Drawing.FontStyle]::Bold
+    )
+    $trophyLabel.TextAlign = "MiddleCenter"
+    $trophyLabel.Location = New-Object System.Drawing.Point(15, 25)
+    $trophyLabel.Size = New-Object System.Drawing.Size(395, 55)
+
+    $titleLabel = New-Object System.Windows.Forms.Label
+    $titleLabel.Text = [string]$achievement.Title
+    $titleLabel.Font = New-Object System.Drawing.Font("Segoe UI", 11)
+    $titleLabel.TextAlign = "MiddleCenter"
+    $titleLabel.Location = New-Object System.Drawing.Point(15, 85)
+    $titleLabel.Size = New-Object System.Drawing.Size(395, 40)
+    $titleLabel.AutoEllipsis = $true
+
+    $okButton = New-Object System.Windows.Forms.Button
+    $okButton.Text = "OK"
+    $okButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
+    $okButton.Location = New-Object System.Drawing.Point(165, 140)
+    $okButton.Size = New-Object System.Drawing.Size(100, 30)
+
+    $popup.Controls.AddRange(@($trophyLabel, $titleLabel, $okButton))
+    $popup.AcceptButton = $okButton
+    [void]$popup.ShowDialog($form)
+    $popup.Dispose()
 }
 
     if ($achievement.Unlocked) {
