@@ -518,7 +518,11 @@ $statusLabel.Text = "Ready"
 $statusLabel.Location = New-Object System.Drawing.Point(20, 465)
 $statusLabel.Size = New-Object System.Drawing.Size(780, 25)
 $statusLabel.Anchor = "Bottom,Left,Right"
-
+# Windows achievement notification
+$notifyIcon = New-Object System.Windows.Forms.NotifyIcon
+$notifyIcon.Icon = [System.Drawing.SystemIcons]::Information
+$notifyIcon.Visible = $true
+$notifyIcon.BalloonTipTitle = "Tolis Achievement System"
 $form.Controls.AddRange(@(
     $gamesLabel,
     $gamesList,
@@ -1027,6 +1031,525 @@ if ($null -ne $lineageGame) {
     if ($addedAny) {
         Save-Games
     }
+}
+
+# Add World of Warcraft and its default achievements
+$wowGame = $script:Games |
+    Where-Object { $_.Name -eq "World of Warcraft" } |
+    Select-Object -First 1
+
+$wowNeedsSave = $false
+
+if ($null -eq $wowGame) {
+    $wowGame = [pscustomobject]@{
+        Id = [guid]::NewGuid().ToString()
+        Name = "World of Warcraft"
+        ExePath = ""
+        TotalSeconds = 0
+        LastPlayed = ""
+        Achievements = @()
+    }
+
+    $script:Games = @($script:Games) + @($wowGame)
+    $wowNeedsSave = $true
+}
+
+$wowAchievements = @(
+    @{
+        Title = "Azeroth Awaits"
+        Description = "Create your first character and begin your adventure."
+    }
+    @{
+        Title = "First Steps"
+        Description = "Complete your first quest."
+    }
+    @{
+        Title = "Questing Hero"
+        Description = "Complete 100 quests."
+    }
+    @{
+        Title = "Quest Master"
+        Description = "Complete 500 quests."
+    }
+    @{
+        Title = "Level Up"
+        Description = "Reach level 10."
+    }
+    @{
+        Title = "Seasoned Adventurer"
+        Description = "Reach level 30."
+    }
+    @{
+        Title = "Veteran Hero"
+        Description = "Reach level 60."
+    }
+    @{
+        Title = "Maximum Potential"
+        Description = "Reach the maximum level available in your version of WoW."
+    }
+    @{
+        Title = "Dungeon Initiate"
+        Description = "Complete your first dungeon."
+    }
+    @{
+        Title = "Dungeon Delver"
+        Description = "Complete 25 dungeons."
+    }
+    @{
+        Title = "Dungeon Veteran"
+        Description = "Complete 100 dungeons."
+    }
+    @{
+        Title = "First Raid"
+        Description = "Complete your first raid encounter."
+    }
+    @{
+        Title = "Raid Regular"
+        Description = "Defeat 10 raid bosses."
+    }
+    @{
+        Title = "Raid Conqueror"
+        Description = "Defeat 50 raid bosses."
+    }
+    @{
+        Title = "Boss Slayer"
+        Description = "Defeat a powerful boss without giving up."
+    }
+    @{
+        Title = "Explorer of Azeroth"
+        Description = "Discover 25 new locations."
+    }
+    @{
+        Title = "World Traveler"
+        Description = "Explore several different regions of Azeroth."
+    }
+    @{
+        Title = "Flight Paths"
+        Description = "Discover 20 flight paths."
+    }
+    @{
+        Title = "Gathering Beginner"
+        Description = "Gather your first crafting material."
+    }
+    @{
+        Title = "Dedicated Crafter"
+        Description = "Craft 100 items."
+    }
+    @{
+        Title = "Profession Expert"
+        Description = "Advance one profession to its maximum skill for your version."
+    }
+    @{
+        Title = "Gold Collector"
+        Description = "Save 1,000 gold."
+    }
+    @{
+        Title = "Mount Collector"
+        Description = "Collect your first mount."
+    }
+    @{
+        Title = "A Stable of Mounts"
+        Description = "Collect 10 different mounts."
+    }
+    @{
+        Title = "Pet Collector"
+        Description = "Obtain your first companion pet."
+    }
+    @{
+        Title = "Battle Ready"
+        Description = "Win your first PvP battle."
+    }
+    @{
+        Title = "Honor Bound"
+        Description = "Win 10 PvP battles."
+    }
+    @{
+        Title = "Glory in Battle"
+        Description = "Win 50 PvP battles."
+    }
+    @{
+        Title = "Reputation Builder"
+        Description = "Reach Exalted reputation with a faction."
+    }
+    @{
+        Title = "Friends in Azeroth"
+        Description = "Join a guild."
+    }
+)
+
+foreach ($default in $wowAchievements) {
+
+    $existingTitles = @(
+        $wowGame.Achievements |
+            Where-Object { $null -ne $_ -and $_.Title } |
+            ForEach-Object { [string]$_.Title }
+    )
+
+    if ($existingTitles -notcontains $default.Title) {
+
+        $newAchievement = [pscustomobject]@{
+            Id = [guid]::NewGuid().ToString()
+            Title = $default.Title
+            Description = $default.Description
+            Unlocked = $false
+            UnlockedAt = ""
+        }
+
+        $wowGame.Achievements = @($wowGame.Achievements) +
+            @($newAchievement)
+
+        $wowNeedsSave = $true
+    }
+}
+
+if ($wowNeedsSave) {
+    Save-Games
+}
+
+# Add Dragon Ball Online and its default achievements
+$dboGame = $script:Games |
+    Where-Object { $_.Name -eq "Dragon Ball Online" } |
+    Select-Object -First 1
+
+$dboNeedsSave = $false
+
+if ($null -eq $dboGame) {
+    $dboGame = [pscustomobject]@{
+        Id = [guid]::NewGuid().ToString()
+        Name = "Dragon Ball Online"
+        ExePath = ""
+        TotalSeconds = 0
+        LastPlayed = ""
+        Achievements = @()
+    }
+
+    $script:Games = @($script:Games) + @($dboGame)
+    $dboNeedsSave = $true
+}
+
+$dboAchievements = @(
+    @{
+        Title = "A New Warrior"
+        Description = "Begin your adventure in the world of Dragon Ball Online."
+    }
+    @{
+        Title = "First Victory"
+        Description = "Defeat your first enemy."
+    }
+    @{
+        Title = "Quest Beginner"
+        Description = "Complete your first quest."
+    }
+    @{
+        Title = "Quest Adventurer"
+        Description = "Complete 50 quests."
+    }
+    @{
+        Title = "Quest Champion"
+        Description = "Complete 200 quests."
+    }
+    @{
+        Title = "Rising Fighter"
+        Description = "Reach level 20."
+    }
+    @{
+        Title = "Veteran Warrior"
+        Description = "Reach level 40."
+    }
+    @{
+        Title = "Ultimate Fighter"
+        Description = "Reach level 50 or the level cap of your server."
+    }
+    @{
+        Title = "Martial Arts Student"
+        Description = "Learn and use your first combat skill."
+    }
+    @{
+        Title = "Skill Specialist"
+        Description = "Unlock several skills for your character."
+    }
+    @{
+        Title = "Combo Master"
+        Description = "Successfully use a powerful skill combination in battle."
+    }
+    @{
+        Title = "Power Awakening"
+        Description = "Unlock a major character transformation or power-up."
+    }
+    @{
+        Title = "Class Advancement"
+        Description = "Complete a class advancement quest."
+    }
+    @{
+        Title = "Dragon Ball Hunter"
+        Description = "Obtain your first Dragon Ball."
+    }
+    @{
+        Title = "Wish Granted"
+        Description = "Collect the Dragon Balls and make a wish."
+    }
+    @{
+        Title = "Time Traveler"
+        Description = "Complete your first Time Machine Quest."
+    }
+    @{
+        Title = "History Protector"
+        Description = "Complete multiple Time Machine Quests."
+    }
+    @{
+        Title = "Dungeon Explorer"
+        Description = "Complete your first dungeon or major instance."
+    }
+    @{
+        Title = "Dungeon Veteran"
+        Description = "Complete 10 dungeon runs."
+    }
+    @{
+        Title = "Boss Breaker"
+        Description = "Defeat a powerful boss enemy."
+    }
+    @{
+        Title = "Party Fighter"
+        Description = "Complete a challenging activity with a group."
+    }
+    @{
+        Title = "Guild Member"
+        Description = "Join a guild."
+    }
+    @{
+        Title = "PvP Initiate"
+        Description = "Complete your first PvP battle."
+    }
+    @{
+        Title = "PvP Challenger"
+        Description = "Win 10 PvP battles."
+    }
+    @{
+        Title = "Equipment Upgrade"
+        Description = "Upgrade a piece of equipment."
+    }
+    @{
+        Title = "Well Equipped"
+        Description = "Equip your character with a complete set of suitable gear."
+    }
+    @{
+        Title = "Crafting Apprentice"
+        Description = "Craft your first item."
+    }
+    @{
+        Title = "Zeni Collector"
+        Description = "Accumulate a substantial amount of Zeni."
+    }
+    @{
+        Title = "World Explorer"
+        Description = "Discover several new areas of the world."
+    }
+    @{
+        Title = "Legendary Warrior"
+        Description = "Complete a major milestone in your character's journey."
+    }
+)
+
+foreach ($default in $dboAchievements) {
+
+    $existingTitles = @(
+        $dboGame.Achievements |
+            Where-Object { $null -ne $_ -and $_.Title } |
+            ForEach-Object { [string]$_.Title }
+    )
+
+    if ($existingTitles -notcontains $default.Title) {
+
+        $newAchievement = [pscustomobject]@{
+            Id = [guid]::NewGuid().ToString()
+            Title = $default.Title
+            Description = $default.Description
+            Unlocked = $false
+            UnlockedAt = ""
+        }
+
+        $dboGame.Achievements = @($dboGame.Achievements) +
+            @($newAchievement)
+
+        $dboNeedsSave = $true
+    }
+}
+
+if ($dboNeedsSave) {
+    Save-Games
+}
+
+# Add Yu-Gi-Oh! PRO and its default achievements
+$ygoGame = $script:Games |
+    Where-Object { $_.Name -eq "Yu-Gi-Oh! PRO" } |
+    Select-Object -First 1
+
+$ygoNeedsSave = $false
+
+if ($null -eq $ygoGame) {
+    $ygoGame = [pscustomobject]@{
+        Id = [guid]::NewGuid().ToString()
+        Name = "Yu-Gi-Oh! PRO"
+        ExePath = ""
+        TotalSeconds = 0
+        LastPlayed = ""
+        Achievements = @()
+    }
+
+    $script:Games = @($script:Games) + @($ygoGame)
+    $ygoNeedsSave = $true
+}
+
+$ygoAchievements = @(
+    @{
+        Title = "First Duel"
+        Description = "Complete your first duel."
+    }
+    @{
+        Title = "First Victory"
+        Description = "Win your first duel."
+    }
+    @{
+        Title = "Duel Apprentice"
+        Description = "Win 10 duels."
+    }
+    @{
+        Title = "Duel Veteran"
+        Description = "Win 50 duels."
+    }
+    @{
+        Title = "Duel Master"
+        Description = "Win 100 duels."
+    }
+    @{
+        Title = "Winning Streak"
+        Description = "Win 5 duels in a row."
+    }
+    @{
+        Title = "Comeback Victory"
+        Description = "Win a duel after being in a difficult position."
+    }
+    @{
+        Title = "Perfect Strategy"
+        Description = "Win a duel without making a major strategic mistake."
+    }
+    @{
+        Title = "Deck Builder"
+        Description = "Create your own deck."
+    }
+    @{
+        Title = "Deck Specialist"
+        Description = "Build and use 5 different decks."
+    }
+    @{
+        Title = "Card Collector"
+        Description = "Collect 100 different cards."
+    }
+    @{
+        Title = "Spell Specialist"
+        Description = "Win a duel using Spell Cards effectively."
+    }
+    @{
+        Title = "Trap Strategist"
+        Description = "Win a duel using Trap Cards effectively."
+    }
+    @{
+        Title = "Monster Master"
+        Description = "Win a duel with a monster-based strategy."
+    }
+    @{
+        Title = "Tribute Summoner"
+        Description = "Successfully Tribute Summon a monster."
+    }
+    @{
+        Title = "Special Summoner"
+        Description = "Special Summon a monster."
+    }
+    @{
+        Title = "Fusion Summoner"
+        Description = "Successfully Fusion Summon a monster."
+    }
+    @{
+        Title = "Synchro Summoner"
+        Description = "Successfully Synchro Summon a monster."
+    }
+    @{
+        Title = "Xyz Summoner"
+        Description = "Successfully Xyz Summon a monster."
+    }
+    @{
+        Title = "Pendulum Summoner"
+        Description = "Successfully Pendulum Summon monsters."
+    }
+    @{
+        Title = "Link Summoner"
+        Description = "Successfully Link Summon a monster."
+    }
+    @{
+        Title = "Chain Reaction"
+        Description = "Resolve a Chain involving multiple card effects."
+    }
+    @{
+        Title = "Effect Negator"
+        Description = "Negate an opponent's card or effect."
+    }
+    @{
+        Title = "Boss Monster"
+        Description = "Summon a powerful boss monster."
+    }
+    @{
+        Title = "Life Point Survivor"
+        Description = "Win a duel after your Life Points become critically low."
+    }
+    @{
+        Title = "Comeback Duelist"
+        Description = "Turn a losing position into a victory."
+    }
+    @{
+        Title = "Tournament Debut"
+        Description = "Participate in a tournament or organized event."
+    }
+    @{
+        Title = "Ranked Challenger"
+        Description = "Complete your first ranked duel, if supported by your client."
+    }
+    @{
+        Title = "Battle Tactician"
+        Description = "Win a duel by carefully timing your card effects."
+    }
+    @{
+        Title = "Legendary Duelist"
+        Description = "Win 200 duels."
+    }
+)
+
+foreach ($default in $ygoAchievements) {
+
+    $existingTitles = @(
+        $ygoGame.Achievements |
+            Where-Object { $null -ne $_ -and $_.Title } |
+            ForEach-Object { [string]$_.Title }
+    )
+
+    if ($existingTitles -notcontains $default.Title) {
+
+        $newAchievement = [pscustomobject]@{
+            Id = [guid]::NewGuid().ToString()
+            Title = $default.Title
+            Description = $default.Description
+            Unlocked = $false
+            UnlockedAt = ""
+        }
+
+        $ygoGame.Achievements = @($ygoGame.Achievements) +
+            @($newAchievement)
+
+        $ygoNeedsSave = $true
+    }
+}
+
+if ($ygoNeedsSave) {
+    Save-Games
 }
 
 Refresh-Games
