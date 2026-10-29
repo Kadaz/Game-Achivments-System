@@ -538,6 +538,7 @@ $form.Controls.AddRange(@(
     $addAchievementButton,
     $toggleAchievementButton,
     $deleteAchievementButton,
+	$editAchievementButton,
     $statusLabel
 ))
 # Browse and save the selected game's EXE
@@ -659,6 +660,56 @@ $deleteAchievementButton.Add_Click({
     }
 })
 
+# Edit the selected achievement
+$editAchievementButton.Add_Click({
+
+    $game = Get-SelectedGame
+
+    if ($null -eq $game) {
+        return
+    }
+
+    $index = $achievementsList.SelectedIndex
+
+    if ($index -lt 0 -or $index -ge @($game.Achievements).Count) {
+        [System.Windows.Forms.MessageBox]::Show(
+            "Please select an achievement first.",
+            "No achievement selected"
+        ) | Out-Null
+        return
+    }
+
+    $achievement = $game.Achievements[$index]
+
+    $title = [Microsoft.VisualBasic.Interaction]::InputBox(
+        "Enter the achievement title:",
+        "Edit Achievement",
+        [string]$achievement.Title
+    )
+
+    if ([string]::IsNullOrWhiteSpace($title)) {
+        return
+    }
+
+    $description = [Microsoft.VisualBasic.Interaction]::InputBox(
+        "Enter the achievement description:",
+        "Edit Achievement",
+        [string]$achievement.Description
+    )
+
+    if ([string]::IsNullOrWhiteSpace($description)) {
+        return
+    }
+
+    $achievement.Title = $title.Trim()
+    $achievement.Description = $description.Trim()
+
+    Save-Games
+    Refresh-Achievements
+
+    $achievementsList.SelectedIndex = $index
+    $statusLabel.Text = "Achievement updated for $($game.Name)."
+})
 # Add a new achievement
 $addAchievementButton.Add_Click({
 
