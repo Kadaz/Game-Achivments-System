@@ -865,6 +865,170 @@ $form.Add_FormClosing({
 })
 
 Load-Games
+
+# Add default Lineage II High Five achievements without duplicates
+$lineageGame = $script:Games |
+    Where-Object { $_.Name -eq "Lineage II" } |
+    Select-Object -First 1
+
+if ($null -ne $lineageGame) {
+
+    $defaultAchievements = @(
+        @{
+            Title = "First Steps"
+            Description = "Reach level 20 with your character."
+        }
+        @{
+            Title = "First Class Transfer"
+            Description = "Complete your first class transfer at level 20."
+        }
+        @{
+            Title = "Second Class Transfer"
+            Description = "Complete your second class transfer at level 40."
+        }
+        @{
+            Title = "Third Class Transfer"
+            Description = "Complete your third class transfer at level 76."
+        }
+        @{
+            Title = "Veteran Adventurer"
+            Description = "Reach level 80 with your main character."
+        }
+        @{
+            Title = "High Five Legend"
+            Description = "Reach the level cap of 85."
+        }
+        @{
+            Title = "A New Path"
+            Description = "Create your first subclass."
+        }
+        @{
+            Title = "Subclass Veteran"
+            Description = "Raise a subclass to level 75."
+        }
+        @{
+            Title = "Raid Initiate"
+            Description = "Defeat your first Raid Boss."
+        }
+        @{
+            Title = "Epic Challenger"
+            Description = "Participate in an Epic Boss raid."
+        }
+        @{
+            Title = "Proud Clan Member"
+            Description = "Join a clan and become part of a team."
+        }
+        @{
+            Title = "Olympiad Debut"
+            Description = "Complete your first Grand Olympiad match."
+        }
+        @{
+            Title = "Master Enchanter"
+            Description = "Successfully enchant a weapon."
+        }
+        @{
+            Title = "Treasure Hunter"
+            Description = "Obtain your first rare drop from a monster or boss."
+        }
+        @{
+            Title = "Adena Collector"
+            Description = "Accumulate 1,000,000 Adena."
+        }
+		
+		@{
+            Title = "Noblesse"
+            Description = "Obtain Noblesse status on your character."
+        }
+        @{
+            Title = "Heroic Ambition"
+            Description = "Become a Hero through the Grand Olympiad."
+        }
+        @{
+            Title = "Castle Conqueror"
+            Description = "Participate in a successful Castle Siege."
+        }
+        @{
+            Title = "Fortress Fighter"
+            Description = "Take part in a Fortress Siege."
+        }
+        @{
+            Title = "Clan Reputation"
+            Description = "Help your clan earn reputation points."
+        }
+        @{
+            Title = "Pet Companion"
+            Description = "Obtain your first pet or servitor companion."
+        }
+        @{
+            Title = "Servitor Master"
+            Description = "Use your servitor to help defeat a powerful enemy."
+        }
+        @{
+            Title = "Crafting Beginner"
+            Description = "Craft your first item."
+        }
+        @{
+            Title = "Spoils of War"
+            Description = "Obtain an item through spoil and sweep."
+        }
+        @{
+            Title = "Enchanting Expert"
+            Description = "Successfully enchant an item to +6 or higher."
+        }
+        @{
+            Title = "Attribute Adept"
+            Description = "Add an elemental attribute to a piece of equipment."
+        }
+        @{
+            Title = "Seven Signs"
+            Description = "Participate in the Seven Signs competition."
+        }
+        @{
+            Title = "Dimensional Traveler"
+            Description = "Enter the Dimensional Rift."
+        }
+        @{
+            Title = "Olympiad Veteran"
+            Description = "Complete 10 Grand Olympiad matches."
+        }
+        @{
+            Title = "The Ultimate Challenge"
+            Description = "Defeat a challenging high-level Raid Boss."
+        }
+    )
+
+    $addedAny = $false
+
+    foreach ($default in $defaultAchievements) {
+
+        $existingTitles = @(
+            $lineageGame.Achievements |
+                Where-Object { $null -ne $_ -and $_.Title } |
+                ForEach-Object { [string]$_.Title }
+        )
+
+        if ($existingTitles -notcontains $default.Title) {
+
+            $newAchievement = [pscustomobject]@{
+                Id = [guid]::NewGuid().ToString()
+                Title = $default.Title
+                Description = $default.Description
+                Unlocked = $false
+                UnlockedAt = ""
+            }
+
+            $lineageGame.Achievements = @($lineageGame.Achievements) +
+                @($newAchievement)
+
+            $addedAny = $true
+        }
+    }
+
+    if ($addedAny) {
+        Save-Games
+    }
+}
+
 Refresh-Games
 Refresh-Details
 Refresh-Achievements
