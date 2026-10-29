@@ -669,13 +669,13 @@ if ($achievement.Unlocked) {
     $trophy = [string]$achievement.Trophy
 
     switch ($trophy) {
-        "Bronze"   { $trophySymbol = "🥉" }
-        "Silver"   { $trophySymbol = "🥈" }
-        "Gold"     { $trophySymbol = "🥇" }
-        "Platinum" { $trophySymbol = "🏆" }
-        default    {
+        "Bronze"   { $trophySymbol = [char]::ConvertFromUtf32(0x1F949) }
+        "Silver"   { $trophySymbol = [char]::ConvertFromUtf32(0x1F948) }
+        "Gold"     { $trophySymbol = [char]::ConvertFromUtf32(0x1F947) }
+        "Platinum" { $trophySymbol = [char]::ConvertFromUtf32(0x1F3C6) }
+        default {
             $trophy = "Bronze"
-            $trophySymbol = "🥉"
+            $trophySymbol = [char]::ConvertFromUtf32(0x1F949)
         }
     }
 
@@ -848,7 +848,12 @@ if ($trophy -notin @("Bronze", "Silver", "Gold", "Platinum")) {
     return
 }
 
-$achievement.Trophy = $trophy
+if ($achievement.PSObject.Properties["Trophy"]) {
+    $achievement.Trophy = $trophy
+}
+else {
+    $achievement | Add-Member -MemberType NoteProperty -Name Trophy -Value $trophy
+}
 
     $achievement.Title = $title.Trim()
     $achievement.Description = $description.Trim()
