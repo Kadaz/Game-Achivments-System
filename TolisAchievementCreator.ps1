@@ -791,14 +791,34 @@ $addAchievementButton.Add_Click({
     if ([string]::IsNullOrWhiteSpace($description)) {
         return
     }
+	$trophy = [Microsoft.VisualBasic.Interaction]::InputBox(
+    "Choose trophy: Bronze, Silver, Gold or Platinum",
+    "Achievement Trophy",
+    "Bronze"
+)
+
+if ([string]::IsNullOrWhiteSpace($trophy)) {
+    return
+}
+
+$trophy = $trophy.Trim()
+
+if ($trophy -notin @("Bronze", "Silver", "Gold", "Platinum")) {
+    [System.Windows.Forms.MessageBox]::Show(
+        "Please enter Bronze, Silver, Gold or Platinum.",
+        "Invalid trophy"
+    ) | Out-Null
+    return
+}
 
     $newAchievement = [pscustomobject]@{
-        Id = [guid]::NewGuid().ToString()
-        Title = $title.Trim()
-        Description = $description.Trim()
-        Unlocked = $false
-        UnlockedAt = ""
-    }
+    Id = [guid]::NewGuid().ToString()
+    Title = $title.Trim()
+    Description = $description.Trim()
+    Trophy = "Bronze"
+    Unlocked = $false
+    UnlockedAt = ""
+}
 
     $game.Achievements = @($game.Achievements) + @($newAchievement)
 
