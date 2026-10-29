@@ -636,7 +636,20 @@ $toggleAchievementButton.Add_Click({
     }
 
     $achievement = $game.Achievements[$index]
-    $achievement.Unlocked = -not [bool]$achievement.Unlocked
+    $achievement.Unlocked = -not $achievement.Unlocked
+
+if ($achievement.Unlocked) {
+    $notifyIcon.BalloonTipTitle = "Achievement Unlocked!"
+    $notifyIcon.BalloonTipText = "$($game.Name): $($achievement.Title)"
+    $notifyIcon.ShowBalloonTip(5000)
+	[System.Media.SystemSounds]::Asterisk.Play()
+	[System.Windows.Forms.MessageBox]::Show(
+    "Achievement Unlocked!`r`n`r`n$($achievement.Title)",
+    "Tolis Achievement System",
+    [System.Windows.Forms.MessageBoxButtons]::OK,
+    [System.Windows.Forms.MessageBoxIcon]::Information
+)
+}
 
     if ($achievement.Unlocked) {
         $achievement.UnlockedAt = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
