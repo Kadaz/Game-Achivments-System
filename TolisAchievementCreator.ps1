@@ -251,16 +251,28 @@ function Refresh-Achievements {
     $achievementProgressBar.Value = $percent
 
     foreach ($achievement in $allAchievements) {
-        if ($achievement.Unlocked) {
-            $state = "[UNLOCKED]"
-        } else {
-            $state = "[LOCKED]"
-        }
 
-        [void]$achievementsList.Items.Add(
-            "$state $($achievement.Title)"
-        )
+    if ($achievement.Unlocked) {
+        $state = "[UNLOCKED]"
     }
+    else {
+        $state = "[LOCKED]"
+    }
+
+    $trophy = [string]$achievement.Trophy
+
+    switch ($trophy) {
+        "Bronze"   { $symbol = "[BRONZE]" }
+        "Silver"   { $symbol = "[SILVER]" }
+        "Gold"     { $symbol = "[GOLD]" }
+        "Platinum" { $symbol = "[PLATINUM]" }
+        default    { $symbol = "[BRONZE]" }
+    }
+
+    [void]$achievementsList.Items.Add(
+        "$symbol $state $($achievement.Title)"
+    )
+}
 }
 
 # Automatic game playtime tracking
@@ -607,6 +619,20 @@ $achievementsList.Add_DoubleClick({
     if ([string]::IsNullOrWhiteSpace($description)) {
         $description = "No description available."
     }
+	$trophy = [string]$achievement.Trophy
+
+if ([string]::IsNullOrWhiteSpace($trophy)) {
+    $trophy = "Bronze"
+}
+
+$unlockedAt = [string]$achievement.UnlockedAt
+
+if ($achievement.Unlocked -and $unlockedAt) {
+    $details = "$description`r`n`r`nTrophy: $trophy`r`nUnlocked: $unlockedAt"
+}
+else {
+    $details = "$description`r`n`r`nTrophy: $trophy`r`nStatus: Locked"
+}
 
     [System.Windows.Forms.MessageBox]::Show(
         $description,
@@ -815,7 +841,7 @@ if ($trophy -notin @("Bronze", "Silver", "Gold", "Platinum")) {
     Id = [guid]::NewGuid().ToString()
     Title = $title.Trim()
     Description = $description.Trim()
-    Trophy = "Bronze"
+    Trophy = $trophy
     Unlocked = $false
     UnlockedAt = ""
 }
