@@ -258,7 +258,7 @@ function Refresh-Achievements {
         }
 
         [void]$achievementsList.Items.Add(
-            "$state $($achievement.Title) - $($achievement.Description)"
+            "$state $($achievement.Title)"
         )
     }
 }
@@ -579,6 +579,37 @@ $browseExeButton.Add_Click({
 $gamesList.Add_SelectedIndexChanged({
     Refresh-Details
     Refresh-Achievements
+})
+
+# Show achievement description on double-click
+$achievementsList.Add_DoubleClick({
+
+    $game = Get-SelectedGame
+
+    if ($null -eq $game) {
+        return
+    }
+
+    $index = $achievementsList.SelectedIndex
+
+    if ($index -lt 0 -or $index -ge @($game.Achievements).Count) {
+        return
+    }
+
+    $achievement = $game.Achievements[$index]
+
+    $description = [string]$achievement.Description
+
+    if ([string]::IsNullOrWhiteSpace($description)) {
+        $description = "No description available."
+    }
+
+    [System.Windows.Forms.MessageBox]::Show(
+        $description,
+        [string]$achievement.Title,
+        [System.Windows.Forms.MessageBoxButtons]::OK,
+        [System.Windows.Forms.MessageBoxIcon]::Information
+    ) | Out-Null
 })
 
 # Unlock or lock the selected achievement
