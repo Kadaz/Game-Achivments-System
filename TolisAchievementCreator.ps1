@@ -258,7 +258,7 @@ function Refresh-Achievements {
         }
 
         [void]$achievementsList.Items.Add(
-            "$state $($achievement.Title)"
+            "$state $($achievement.Title) - $($achievement.Description)"
         )
     }
 }
@@ -710,6 +710,7 @@ $editAchievementButton.Add_Click({
     $achievementsList.SelectedIndex = $index
     $statusLabel.Text = "Achievement updated for $($game.Name)."
 })
+
 # Add a new achievement
 $addAchievementButton.Add_Click({
 
