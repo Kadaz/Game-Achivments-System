@@ -1,0 +1,880 @@
+[
+    {
+        "Id":  "7b7dad2e-8f59-4fb0-85d3-1eb44a018648",
+        "Name":  "Lineage II",
+        "ExePath":  "G:\\Program Files (x86)\\NCsoft\\Lineage II\\system\\l2.exe",
+        "TotalSeconds":  0,
+        "LastPlayed":  "",
+        "Achievements":  [
+                             {
+                                 "Id":  "d6b3cf78-0300-4035-bf12-26d76369fbee",
+                                 "Title":  "First Steps",
+                                 "Description":  "Reach level 20 with your character.",
+                                 "Unlocked":  true,
+                                 "UnlockedAt":  "2026-10-29 18:46:12"
+                             },
+                             {
+                                 "Id":  "19279875-be07-4759-bbc9-97bfb272672b",
+                                 "Title":  "First Class Transfer",
+                                 "Description":  "Complete your first class transfer at level 20.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "9f3f34e8-dbc1-4c14-932f-73a8e49144da",
+                                 "Title":  "Second Class Transfer",
+                                 "Description":  "Complete your second class transfer at level 40.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "a1f4393f-237c-4c23-9bc0-06dba4cd0122",
+                                 "Title":  "Third Class Transfer",
+                                 "Description":  "Complete your third class transfer at level 76.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "7b50cd3c-6fe5-4866-86a1-8f4670c81e0a",
+                                 "Title":  "Veteran Adventurer",
+                                 "Description":  "Reach level 80 with your main character.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "f5dfc629-aee7-49b6-a15b-4b90ea407e09",
+                                 "Title":  "High Five Legend",
+                                 "Description":  "Reach the level cap of 85.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "5b77e0ab-fad3-44da-a8e3-dc80ecf46250",
+                                 "Title":  "A New Path",
+                                 "Description":  "Create your first subclass.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "9bfb83b9-2193-4dc5-94ed-27395f1925cc",
+                                 "Title":  "Subclass Veteran",
+                                 "Description":  "Raise a subclass to level 75.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "18712cf4-169d-4b95-8195-2b41516b1d8d",
+                                 "Title":  "Raid Initiate",
+                                 "Description":  "Defeat your first Raid Boss.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "d879b780-b231-42ed-adf9-2de1b8866cda",
+                                 "Title":  "Epic Challenger",
+                                 "Description":  "Participate in an Epic Boss raid.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "500f494d-00c9-49b2-b35c-7a13e7109cbb",
+                                 "Title":  "Proud Clan Member",
+                                 "Description":  "Join a clan and become part of a team.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "520a7a47-1f3a-407c-9905-aa216446c545",
+                                 "Title":  "Olympiad Debut",
+                                 "Description":  "Complete your first Grand Olympiad match.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "936c2bb9-4b81-495f-bde7-6084fd530bcd",
+                                 "Title":  "Master Enchanter",
+                                 "Description":  "Successfully enchant a weapon.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "11855c61-c897-41c1-af58-a4e26f62fe56",
+                                 "Title":  "Treasure Hunter",
+                                 "Description":  "Obtain your first rare drop from a monster or boss.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "df210822-af69-481a-9735-3a70e87dda81",
+                                 "Title":  "Adena Collector",
+                                 "Description":  "Accumulate 1,000,000 Adena.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "25c5b725-fd73-4fec-9027-b168b1471f94",
+                                 "Title":  "Noblesse",
+                                 "Description":  "Obtain Noblesse status on your character.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "069ad5c1-fd4f-499d-b6cc-903cbd8e82e2",
+                                 "Title":  "Heroic Ambition",
+                                 "Description":  "Become a Hero through the Grand Olympiad.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "27ca46f0-fc17-4922-989a-b83e7480ed03",
+                                 "Title":  "Castle Conqueror",
+                                 "Description":  "Participate in a successful Castle Siege.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "3dacf457-9416-4afb-b8f0-c1001b98be97",
+                                 "Title":  "Fortress Fighter",
+                                 "Description":  "Take part in a Fortress Siege.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "2a673132-6fee-4eaf-99dd-21be7397f810",
+                                 "Title":  "Clan Reputation",
+                                 "Description":  "Help your clan earn reputation points.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "e8c52eac-6ef7-41e5-9acb-e923b18296c7",
+                                 "Title":  "Pet Companion",
+                                 "Description":  "Obtain your first pet or servitor companion.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "9ee52efe-41ce-42f5-9766-422f62b65429",
+                                 "Title":  "Servitor Master",
+                                 "Description":  "Use your servitor to help defeat a powerful enemy.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "95749f0b-84ca-489b-8f56-b90fe1b83194",
+                                 "Title":  "Crafting Beginner",
+                                 "Description":  "Craft your first item.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "3e727eb0-b1dd-4989-af3f-ede06d69d495",
+                                 "Title":  "Spoils of War",
+                                 "Description":  "Obtain an item through spoil and sweep.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "30d77554-71ce-4382-b22e-f5771a55a9aa",
+                                 "Title":  "Enchanting Expert",
+                                 "Description":  "Successfully enchant an item to +6 or higher.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "c3bf0bdf-f5ad-4f74-a45a-cbdbe601877f",
+                                 "Title":  "Attribute Adept",
+                                 "Description":  "Add an elemental attribute to a piece of equipment.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "e5cd88eb-c741-4f36-8332-032cc8b12bd2",
+                                 "Title":  "Seven Signs",
+                                 "Description":  "Participate in the Seven Signs competition.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "84ed0ea0-a389-4bec-806d-0f78de998fd2",
+                                 "Title":  "Dimensional Traveler",
+                                 "Description":  "Enter the Dimensional Rift.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "96e4c168-9533-436d-8fcb-35a8f05cc284",
+                                 "Title":  "Olympiad Veteran",
+                                 "Description":  "Complete 10 Grand Olympiad matches.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "33b6b604-6fb4-4ab1-a1b6-991b0aceb3d8",
+                                 "Title":  "The Ultimate Challenge",
+                                 "Description":  "Defeat a challenging high-level Raid Boss.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             }
+                         ]
+    },
+    {
+        "Id":  "e7331c9b-2542-4a35-9fe9-5431cfa754fa",
+        "Name":  "Dragon Ball Online",
+        "ExePath":  "G:\\Program Files (x86)\\Dragonballl Online Crisis\\DBOC.exe",
+        "TotalSeconds":  0,
+        "LastPlayed":  "",
+        "Achievements":  [
+                             {
+                                 "Id":  "e81e28e9-2e62-472b-a414-da0ca6d132e7",
+                                 "Title":  "A New Warrior",
+                                 "Description":  "Begin your adventure in the world of Dragon Ball Online.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "bf63f5c5-3715-4cd5-9c8f-a27077295676",
+                                 "Title":  "First Victory",
+                                 "Description":  "Defeat your first enemy.",
+                                 "Unlocked":  true,
+                                 "UnlockedAt":  "2026-10-29 19:06:28"
+                             },
+                             {
+                                 "Id":  "4c4ded72-be54-456d-a69a-722b257dd5ea",
+                                 "Title":  "Quest Beginner",
+                                 "Description":  "Complete your first quest.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "4df1d5f5-5095-42ed-b4e0-1e385d3938d4",
+                                 "Title":  "Quest Adventurer",
+                                 "Description":  "Complete 50 quests.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "71e6134b-2720-4edc-973d-26cb033bb6a0",
+                                 "Title":  "Quest Champion",
+                                 "Description":  "Complete 200 quests.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "6c9c7606-f795-44af-8fe7-7acac4c91470",
+                                 "Title":  "Rising Fighter",
+                                 "Description":  "Reach level 20.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "ea89325c-bdac-497d-ab3d-f40d2cf28a0e",
+                                 "Title":  "Veteran Warrior",
+                                 "Description":  "Reach level 40.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "423cd558-5c7a-430d-bdb6-f7c3f8216931",
+                                 "Title":  "Ultimate Fighter",
+                                 "Description":  "Reach level 50 or the level cap of your server.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "fa561baa-5464-4bdc-ade9-78b51dc4cb45",
+                                 "Title":  "Martial Arts Student",
+                                 "Description":  "Learn and use your first combat skill.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "45506014-026d-44bf-9ca7-82beadf4ce4e",
+                                 "Title":  "Skill Specialist",
+                                 "Description":  "Unlock several skills for your character.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "870efa1f-a790-481d-b597-e8fa3e6ac86f",
+                                 "Title":  "Combo Master",
+                                 "Description":  "Successfully use a powerful skill combination in battle.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "b9db7a69-d447-4cb0-a136-86a574c1212a",
+                                 "Title":  "Power Awakening",
+                                 "Description":  "Unlock a major character transformation or power-up.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "b68e89f2-cf48-4a71-9423-2e0c907d4298",
+                                 "Title":  "Class Advancement",
+                                 "Description":  "Complete a class advancement quest.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "340a2a81-5c17-420e-a786-761980e515c5",
+                                 "Title":  "Dragon Ball Hunter",
+                                 "Description":  "Obtain your first Dragon Ball.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "a72486e3-6e02-4b6c-93d2-6d9aeb5cb2e7",
+                                 "Title":  "Wish Granted",
+                                 "Description":  "Collect the Dragon Balls and make a wish.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "53eabaa4-0d2e-4168-bd98-02190a84074a",
+                                 "Title":  "Time Traveler",
+                                 "Description":  "Complete your first Time Machine Quest.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "e3b5a4ec-8447-447e-94ff-ef4cf65321d3",
+                                 "Title":  "History Protector",
+                                 "Description":  "Complete multiple Time Machine Quests.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "1d4d8a08-3f8c-4bc4-8e4f-7e2e6f6ca4ca",
+                                 "Title":  "Dungeon Explorer",
+                                 "Description":  "Complete your first dungeon or major instance.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "f3cdc9ce-0cd2-4b55-aaa5-7906f2cceb30",
+                                 "Title":  "Dungeon Veteran",
+                                 "Description":  "Complete 10 dungeon runs.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "97a0cc2f-8d84-401e-a152-cd8c58461e50",
+                                 "Title":  "Boss Breaker",
+                                 "Description":  "Defeat a powerful boss enemy.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "e513d818-f991-4df5-8ba0-a5cb937c5553",
+                                 "Title":  "Party Fighter",
+                                 "Description":  "Complete a challenging activity with a group.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "7430d612-c92f-472d-aad7-c5fcb942f647",
+                                 "Title":  "Guild Member",
+                                 "Description":  "Join a guild.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "dc47f398-a8dd-4466-988a-dbbfd8d35e7b",
+                                 "Title":  "PvP Initiate",
+                                 "Description":  "Complete your first PvP battle.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "1ac0925f-fbcd-4422-ac41-2b11633cc1c8",
+                                 "Title":  "PvP Challenger",
+                                 "Description":  "Win 10 PvP battles.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "06b6c196-5dd0-4208-944b-9c00ba30fab5",
+                                 "Title":  "Equipment Upgrade",
+                                 "Description":  "Upgrade a piece of equipment.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "ef902587-beec-4d09-b921-487460668508",
+                                 "Title":  "Well Equipped",
+                                 "Description":  "Equip your character with a complete set of suitable gear.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "2534eb09-e197-4024-beb0-93b6a37e3ee0",
+                                 "Title":  "Crafting Apprentice",
+                                 "Description":  "Craft your first item.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "1b75a5d2-2b39-4b91-9418-b110780922d0",
+                                 "Title":  "Zeni Collector",
+                                 "Description":  "Accumulate a substantial amount of Zeni.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "c04b29a1-3e16-4047-b018-d521a6c0bf96",
+                                 "Title":  "World Explorer",
+                                 "Description":  "Discover several new areas of the world.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "3aa61e02-4496-4798-8945-8617fae93d85",
+                                 "Title":  "Legendary Warrior",
+                                 "Description":  "Complete a major milestone in your character\u0027s journey.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             }
+                         ]
+    },
+    {
+        "Id":  "f0c6a084-4d77-4fb7-9de0-c94873de3a68",
+        "Name":  "Yu-Gi-Oh! PRO",
+        "ExePath":  "G:\\Program Files (x86)\\Yu-Gi-Oh - The dark side of dimensions\\Game.exe",
+        "TotalSeconds":  1022,
+        "LastPlayed":  "2026-10-29 20:08:10",
+        "Achievements":  [
+                             {
+                                 "Id":  "c38435b8-4614-4590-8e28-d9150a812912",
+                                 "Title":  "First Duel",
+                                 "Description":  "Complete your first duel.",
+                                 "Unlocked":  true,
+                                 "UnlockedAt":  "2026-10-29 19:08:43"
+                             },
+                             {
+                                 "Id":  "14fee5b4-e78f-4b99-be60-86030e70a249",
+                                 "Title":  "First Victory",
+                                 "Description":  "Win your first duel.",
+                                 "Unlocked":  true,
+                                 "UnlockedAt":  "2026-10-29 20:02:15"
+                             },
+                             {
+                                 "Id":  "b13afb6a-67d5-4d3d-bfb9-6e72eb803b7a",
+                                 "Title":  "Duel Apprentice",
+                                 "Description":  "Win 10 duels.",
+                                 "Unlocked":  true,
+                                 "UnlockedAt":  "2026-10-29 19:55:32"
+                             },
+                             {
+                                 "Id":  "c81a8632-6e93-462c-8952-2cfb83474014",
+                                 "Title":  "Duel Veteran",
+                                 "Description":  "Win 50 duels.",
+                                 "Unlocked":  true,
+                                 "UnlockedAt":  "2026-10-29 20:09:11",
+                                 "Trophy":  "Silver"
+                             },
+                             {
+                                 "Id":  "4c5df6d5-54a0-49c3-a059-729f8a26c961",
+                                 "Title":  "Duel Master",
+                                 "Description":  "Win 100 duels.",
+                                 "Unlocked":  true,
+                                 "UnlockedAt":  "2026-10-29 20:09:26",
+                                 "Trophy":  "Gold"
+                             },
+                             {
+                                 "Id":  "7c419809-8e6c-4ce6-a233-86b239cf7b40",
+                                 "Title":  "Winning Streak",
+                                 "Description":  "Win 5 duels in a row.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "67fdf851-8ee4-450e-9b37-b8a6a6895dc6",
+                                 "Title":  "Comeback Victory",
+                                 "Description":  "Win a duel after being in a difficult position.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "717c7037-b2df-46fd-803d-9c14145c219c",
+                                 "Title":  "Perfect Strategy",
+                                 "Description":  "Win a duel without making a major strategic mistake.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "d67e0ae4-6440-42f2-8775-9f9b2d2c9ffc",
+                                 "Title":  "Deck Builder",
+                                 "Description":  "Create your own deck.",
+                                 "Unlocked":  true,
+                                 "UnlockedAt":  "2026-10-29 19:23:15"
+                             },
+                             {
+                                 "Id":  "1388fb8b-345d-4efc-987e-115b294e626a",
+                                 "Title":  "Deck Specialist",
+                                 "Description":  "Build and use 5 different decks.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "4a3efd9c-27eb-47f7-84ac-c7ddba1df346",
+                                 "Title":  "Card Collector",
+                                 "Description":  "Collect 100 different cards.",
+                                 "Unlocked":  true,
+                                 "UnlockedAt":  "2026-10-29 19:18:43"
+                             },
+                             {
+                                 "Id":  "f5834cc6-0b78-48e2-8a21-9997044d871f",
+                                 "Title":  "Spell Specialist",
+                                 "Description":  "Win a duel using Spell Cards effectively.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "4c45dcc4-2b97-4c9b-928b-6698fc348f44",
+                                 "Title":  "Trap Strategist",
+                                 "Description":  "Win a duel using Trap Cards effectively.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "169c34c0-8a53-4f38-ae1e-212cf63b7b1e",
+                                 "Title":  "Monster Master",
+                                 "Description":  "Win a duel with a monster-based strategy.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "86f489be-7410-42f2-9320-d48eb0c5d615",
+                                 "Title":  "Tribute Summoner",
+                                 "Description":  "Successfully Tribute Summon a monster.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "d5253e7e-0add-4f32-8c1c-966bb95f35ab",
+                                 "Title":  "Special Summoner",
+                                 "Description":  "Special Summon a monster.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "171843a3-1eed-4c19-b1ec-175262312d64",
+                                 "Title":  "Fusion Summoner",
+                                 "Description":  "Successfully Fusion Summon a monster.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "21742a87-b468-4b1b-9fcc-8315f0ff05ec",
+                                 "Title":  "Synchro Summoner",
+                                 "Description":  "Successfully Synchro Summon a monster.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "59fd699d-afc7-49dc-90eb-ab6c39f9d0b6",
+                                 "Title":  "Xyz Summoner",
+                                 "Description":  "Successfully Xyz Summon a monster.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "ea96b6f9-b207-49a4-9418-fdcdeb19985e",
+                                 "Title":  "Pendulum Summoner",
+                                 "Description":  "Successfully Pendulum Summon monsters.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "72e6cd22-0ae7-49c9-9b96-3a36a1033a1e",
+                                 "Title":  "Link Summoner",
+                                 "Description":  "Successfully Link Summon a monster.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "380c24d3-5243-476d-8b3d-face06d7bc14",
+                                 "Title":  "Chain Reaction",
+                                 "Description":  "Resolve a Chain involving multiple card effects.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "3c1d3656-65fa-427b-ae78-0fa976a753ba",
+                                 "Title":  "Effect Negator",
+                                 "Description":  "Negate an opponent\u0027s card or effect.",
+                                 "Unlocked":  true,
+                                 "UnlockedAt":  "2026-10-29 19:47:04"
+                             },
+                             {
+                                 "Id":  "eba8662c-6ebe-4cfa-a7ea-62c7ecff20f7",
+                                 "Title":  "Boss Monster",
+                                 "Description":  "Summon a powerful boss monster.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "c7657ebc-d4e3-4d84-8cf6-7d5e08e8ee54",
+                                 "Title":  "Life Point Survivor",
+                                 "Description":  "Win a duel after your Life Points become critically low.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "3769dc37-be72-4ee3-8cc7-c82aeb183332",
+                                 "Title":  "Comeback Duelist",
+                                 "Description":  "Turn a losing position into a victory.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "31a4c008-feff-4c3b-be90-1b9a6456857c",
+                                 "Title":  "Tournament Debut",
+                                 "Description":  "Participate in a tournament or organized event.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "061c7719-7dcb-40c3-aeb5-96528a34ea40",
+                                 "Title":  "Ranked Challenger",
+                                 "Description":  "Complete your first ranked duel, if supported by your client.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "9191edaa-6285-4c06-9344-e34ec76ef5fe",
+                                 "Title":  "Battle Tactician",
+                                 "Description":  "Win a duel by carefully timing your card effects.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "7dfcffbb-62b5-4f0a-a96c-78ee6973012f",
+                                 "Title":  "Legendary Duelist",
+                                 "Description":  "Win 200 duels.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             }
+                         ]
+    },
+    {
+        "Id":  "ce889862-a2a7-4461-b865-18a52d600d07",
+        "Name":  "World Of Warcraft",
+        "ExePath":  "G:\\Program Files (x86)\\World of Warcraft\\game.exe",
+        "TotalSeconds":  0,
+        "LastPlayed":  "",
+        "Achievements":  [
+                             {
+                                 "Id":  "23e55e17-991a-4cde-a555-dd9af41f2c7e",
+                                 "Title":  "Azeroth Awaits",
+                                 "Description":  "Create your first character and begin your adventure.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "b6a880f2-8fa9-412b-b65b-c32c703c8577",
+                                 "Title":  "First Steps",
+                                 "Description":  "Complete your first quest.",
+                                 "Unlocked":  true,
+                                 "UnlockedAt":  "2026-10-29 18:51:55"
+                             },
+                             {
+                                 "Id":  "1b453d97-6609-4099-8c5a-bcc11031eeb1",
+                                 "Title":  "Questing Hero",
+                                 "Description":  "Complete 100 quests.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "96378277-4512-4da8-bf9e-fe910260a556",
+                                 "Title":  "Quest Master",
+                                 "Description":  "Complete 500 quests.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "f94aec3a-aa8f-4abe-8eb2-45a751dfe665",
+                                 "Title":  "Level Up",
+                                 "Description":  "Reach level 10.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "dcd4f6a9-5d10-46ad-85b4-ff904dc4ec31",
+                                 "Title":  "Seasoned Adventurer",
+                                 "Description":  "Reach level 30.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "6b9d1937-b884-45e6-b91b-b64640e1da87",
+                                 "Title":  "Veteran Hero",
+                                 "Description":  "Reach level 60.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "b0fd6322-1d2e-4df6-99b2-6e152b094d15",
+                                 "Title":  "Maximum Potential",
+                                 "Description":  "Reach the maximum level available in your version of WoW.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "d94c9c58-8d06-4d5a-b513-aeada5f94726",
+                                 "Title":  "Dungeon Initiate",
+                                 "Description":  "Complete your first dungeon.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "eaf6eed2-db59-4065-a8e1-34d955793001",
+                                 "Title":  "Dungeon Delver",
+                                 "Description":  "Complete 25 dungeons.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "b3b35b59-eca8-4b75-80fe-fe367efd0571",
+                                 "Title":  "Dungeon Veteran",
+                                 "Description":  "Complete 100 dungeons.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "6a910b20-4c2a-4880-800d-08b7a0cfb375",
+                                 "Title":  "First Raid",
+                                 "Description":  "Complete your first raid encounter.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "021b2051-cfd1-4835-9f32-dad537f74dbc",
+                                 "Title":  "Raid Regular",
+                                 "Description":  "Defeat 10 raid bosses.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "6f798d21-3375-44ba-9e65-b2f7118e5d09",
+                                 "Title":  "Raid Conqueror",
+                                 "Description":  "Defeat 50 raid bosses.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "808c39fd-1c45-4fd4-b2f4-aa555bf512c2",
+                                 "Title":  "Boss Slayer",
+                                 "Description":  "Defeat a powerful boss without giving up.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "a5bfdcfa-fd41-4b9c-b891-79dd809910a7",
+                                 "Title":  "Explorer of Azeroth",
+                                 "Description":  "Discover 25 new locations.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "8bf822b8-a8bf-4154-8007-0fe29670b216",
+                                 "Title":  "World Traveler",
+                                 "Description":  "Explore several different regions of Azeroth.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "50b9927f-89d0-410b-9aa0-da9cd6559d73",
+                                 "Title":  "Flight Paths",
+                                 "Description":  "Discover 20 flight paths.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "1adbc498-e264-4c4b-b1cf-5e81c13e2413",
+                                 "Title":  "Gathering Beginner",
+                                 "Description":  "Gather your first crafting material.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "15ee74e5-4e2d-4e10-95a8-05d3767b0cfd",
+                                 "Title":  "Dedicated Crafter",
+                                 "Description":  "Craft 100 items.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "4d4cafec-cc7c-40b0-8fc6-89b8ca2caade",
+                                 "Title":  "Profession Expert",
+                                 "Description":  "Advance one profession to its maximum skill for your version.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "60d00865-01ed-4296-a6f0-b4fd4e9fb0f1",
+                                 "Title":  "Gold Collector",
+                                 "Description":  "Save 1,000 gold.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "f2bffe7d-689b-42c5-8012-3c0e3c933a81",
+                                 "Title":  "Mount Collector",
+                                 "Description":  "Collect your first mount.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "a37c562d-3d93-416a-9d95-cde46e4a0674",
+                                 "Title":  "A Stable of Mounts",
+                                 "Description":  "Collect 10 different mounts.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "5902a1f2-bc43-488c-ae9d-9ab5cd0b89b1",
+                                 "Title":  "Pet Collector",
+                                 "Description":  "Obtain your first companion pet.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "c8cbd41b-3a8e-41c5-b311-16ae3574a3eb",
+                                 "Title":  "Battle Ready",
+                                 "Description":  "Win your first PvP battle.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "85bb9a03-e265-4a25-9fac-ecf643c7319a",
+                                 "Title":  "Honor Bound",
+                                 "Description":  "Win 10 PvP battles.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "27edcbbf-c108-4df5-a04f-0319873295ff",
+                                 "Title":  "Glory in Battle",
+                                 "Description":  "Win 50 PvP battles.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "68227728-cb0b-4963-aa22-9824128401d7",
+                                 "Title":  "Reputation Builder",
+                                 "Description":  "Reach Exalted reputation with a faction.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             },
+                             {
+                                 "Id":  "90de13c2-47b1-41ff-b6ec-7aabc9603278",
+                                 "Title":  "Friends in Azeroth",
+                                 "Description":  "Join a guild.",
+                                 "Unlocked":  false,
+                                 "UnlockedAt":  ""
+                             }
+                         ]
+    }
+]
