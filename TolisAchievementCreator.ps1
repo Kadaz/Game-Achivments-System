@@ -635,7 +635,7 @@ else {
 }
 
     [System.Windows.Forms.MessageBox]::Show(
-        $description,
+        $details,
         [string]$achievement.Title,
         [System.Windows.Forms.MessageBoxButtons]::OK,
         [System.Windows.Forms.MessageBoxIcon]::Information
@@ -774,6 +774,33 @@ $editAchievementButton.Add_Click({
     if ([string]::IsNullOrWhiteSpace($description)) {
         return
     }
+	$currentTrophy = [string]$achievement.Trophy
+
+if ([string]::IsNullOrWhiteSpace($currentTrophy)) {
+    $currentTrophy = "Bronze"
+}
+
+$trophy = [Microsoft.VisualBasic.Interaction]::InputBox(
+    "Choose trophy: Bronze, Silver, Gold or Platinum",
+    "Edit Achievement Trophy",
+    $currentTrophy
+)
+
+if ([string]::IsNullOrWhiteSpace($trophy)) {
+    return
+}
+
+$trophy = $trophy.Trim()
+
+if ($trophy -notin @("Bronze", "Silver", "Gold", "Platinum")) {
+    [System.Windows.Forms.MessageBox]::Show(
+        "Please enter Bronze, Silver, Gold or Platinum.",
+        "Invalid trophy"
+    ) | Out-Null
+    return
+}
+
+$achievement.Trophy = $trophy
 
     $achievement.Title = $title.Trim()
     $achievement.Description = $description.Trim()
